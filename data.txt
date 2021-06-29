@@ -1,0 +1,25 @@
+hi this ia a text file to check all the 
+vowels,words,lines and spaces in php
+thank you ........456
+
+
+if(isset($_POST['submit']))
+{
+
+
+ 
+    $num = $_POST['accno'];
+
+    $sql = "DELETE FROM passport  WHERE  passnum = $num";
+
+    $retval = mysql_query( $sql, $conn );
+
+if(! $retval )
+{
+  echo"could not delete data";   
+}
+echo "<h3>Deleted data successfully\n</h3>";
+
+
+mysql_close($conn);
+}
